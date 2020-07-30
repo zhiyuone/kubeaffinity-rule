@@ -1,0 +1,24 @@
+# permissions for end users to edit affinities.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: affinity-editor-role
+rules:
+- apiGroups:
+  - rule.newbis.top
+  resources:
+  - affinities
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rule.newbis.top
+  resources:
+  - affinities/status
+  verbs:
+  - get

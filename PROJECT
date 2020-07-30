@@ -1,0 +1,7 @@
+domain: newbis.top
+repo: zhiyuone/kubeaffinity-rule
+resources:
+- group: rule
+  kind: Affinity
+  version: v1alpha1
+version: "2"
